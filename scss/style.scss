@@ -1,0 +1,25 @@
+header{
+    background: red;
+    div{
+        color: green;
+    }
+}
+
+footer{
+    color: blue;
+    div{
+        font-style: italic;
+        span{
+            margin:  0 auto;
+        }
+    }
+}
+
+main{
+    padding: 0 0 0 0;
+}
+// well i don't know about you but I would love to have a break!!!
+aside{
+    transform: scale(.5);
+    position: absolute;
+}
