@@ -13,11 +13,14 @@ module.exports = function(grunt) {
                     src: ['*.scss'],
                     dest: 'css/',
                     ext: '.css'
-      }]
+               }]
             }
         },
         
         watch: {
+            options: {
+                livereload: true,
+            },
             styles: {
                 files: 'scss/*.scss',
                 tasks: ['sass']

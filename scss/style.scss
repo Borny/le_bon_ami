@@ -1,25 +1,154 @@
-header{
-    background: red;
-    div{
-        color: green;
-    }
+@import 'normalize';
+@import 'cssReset';
+@import 'charteLBA';
+@import 'mixinsLBA';
+@import 'placeholderLBA';
+@import 'navLBA';
+
+html,
+body{
+    background: $white;
 }
 
-footer{
-    color: blue;
-    div{
-        font-style: italic;
-        span{
-            margin:  0 auto;
+body{
+    padding: 40px 0 0;
+}
+
+h1{
+    text-align: center;
+    color: $gray;
+}
+
+h2{
+    text-align: center;
+    color: $yellow;
+    font-family: $font-marshmallow;
+    text-shadow: $shadow-75;
+    font-size: $font-size-xxxl;
+}
+
+h3{
+    margin: 20px 0 10px; 
+    color: $gray;    
+    font-family: $font-marshmallow;
+}
+
+
+section{
+    padding: 20px 15px;
+}
+
+//HOME
+.home{
+
+}
+.services{
+    background: $blue;
+    .dogs{
+        input[type=checkbox]{
+            display: none;
+            &:checked{
+                ~ .dropdown{
+                    height: 160px;
+                    .iconPlus{
+                        -webkit-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -ms-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        transform: rotate(90deg);
+                    }
+                    .minus{
+                        -webkit-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -ms-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        transform: rotate(90deg);
+                    }
+                    ul{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .dropdown{
+            @include animate;
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 0 0 10px;
+            padding: 10px 15px;
+            overflow: hidden;
+            background: $white;
+            border-radius: 4px;
+            box-shadow: 0 4px 2px $black-3;
+            p{
+                display: inline-block;
+                vertical-align: middle;
+                color: $blue;
+                font-size: $font-size-lg;
+            }
+            .iconPlus{
+                @include animate;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                float: right;
+                width: 20px;
+                .plus{
+                    display: block;
+                    width: 3px;
+                    height: 20px;
+                    margin: 0 auto;
+                    background: $blue;
+                }
+                .minus{
+                    @include animate;
+                    position: absolute;
+                    display: inline-block;
+                    width: 20px;
+                    height: 3px;
+                    top: 9px;
+                    background: $blue;
+                }
+            }
+            ul{
+                @include animate;
+                padding: 10px 0;
+                opacity: 0;
+                li{
+                    margin: 5px 0 10px;
+                    padding: 0 0 3px;
+                    border-bottom: 1px solid $blue;
+                    p{
+                        color: $gray;
+                        &:last-child{
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cats{
+        @extend .dogs;
+        h3{
+            float: right;
+        }
+        .dropdown{
+            > p{
+                float: right;
+            }
+            .iconPlus{
+                float: left;
+            }
+            ul{
+                clear: both;
+            }
         }
     }
 }
 
-main{
-    padding: 0 0 0 0;
-}
-// well i don't know about you but I would love to have a break!!!
-aside{
-    transform: scale(.5);
-    position: absolute;
+footer{
+    background: $blue;
+    color: $white;
 }

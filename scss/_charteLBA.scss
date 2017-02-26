@@ -1,0 +1,48 @@
+//COLORS
+$white: #FFF;
+$black: #000;
+
+$gray: #444;
+
+$blue: #21ACE7;
+$yellow: #FFC26B;
+
+//OPACITY
+$black-3: rgba(0,0,0,.3);
+$black-6: rgba(0,0,0,.6);
+
+//FONT
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300);
+
+@font-face {
+    font-family: "soft marshmallow";
+    src: url(../fonts/soft_marshmallow/soft_marshmallow.otf) format("truetype");
+}
+
+$font-roboto: 'Roboto', Arial, sans-serif, serif, Helvetica;
+$font-marshmallow: 'soft marshmallow';
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,p,li,a,div,span,label,input,select{
+  font-family: $font-roboto;
+}
+
+//FONT SIZE
+$font-size-sm: 12px;
+$font-size-md: 15px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+$font-size-xxxl: 30px;
+
+//FONT WEIGHT
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+//Z-INDEX
+$zindex-header:100;
+$zindex-nav:150;
+$zindex-navToggle:200;
+
+//TEXT SHADOW
+$shadow-75: 1px 2px 1px rgba(0,0,0,.75);
