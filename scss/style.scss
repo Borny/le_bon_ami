@@ -47,6 +47,9 @@ section{
 .services{
     background: $blue;
     .dogs{
+    	li{
+    		cursor: pointer;
+    	}
         input[type=checkbox]{
             display: none;
             &:checked{
