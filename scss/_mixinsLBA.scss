@@ -10,3 +10,8 @@
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
+
+@mixin inlineBlock($vertical-align){
+    display: inline-block;
+    vertical-align: $vertical-align;
+}
