@@ -8,9 +8,11 @@
     <meta name="description" content="Le Bon Ami, salon de toilettage et accessoire canin.">
     <link rel="stylesheet" href="css/style.css">
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+
 </head>
 <body>    
-    <header>
+    <header>  
         <ul class="header-left">
             <li class="logo"></li>
             <li class="baseline"></li>
@@ -18,7 +20,9 @@
         <input type="checkbox" id="navToggle" autocomplete="off">
         <ul class="header-right">
             <li class="phoneIcon"></li>
-            <li class="phoneNumber"></li>
+            <li class="phoneNumber">
+                <a href="tel:+33950577309">0950577309</a>
+            </li>
             <li class="burgerContainer">
                 <label for="navToggle" class="navToggle">
                     <span></span>
@@ -150,74 +154,104 @@
             </label>
             <div class="service_details collapse-content">
                 <p>Terre Neuve, Lévrier Afghan, Saint Bernard, Chien de Montagne, Berger de Brie…<p>
-                <ul>
-                    <li>*à partir de :</li>
-                    <li>Brushing<span>36€</span></li>
-                    <li></li>
-                </ul>
-                
-                <a href="#" class="btn btn_booking">
-                    Réserver
-                </a>  
-            </div>  
-        </div>
+                    <ul>
+                        <li>*à partir de :</li>
+                        <li>Brushing<span>36€</span></li>
+                        <li></li>
+                    </ul>
 
-        <p>*Les prix peuvent varier en fonction de l'état d'emmêlement de la fourrure.</p>
+                    <a href="#" class="btn btn_booking">
+                        Réserver
+                    </a>  
+                </div>  
+            </div>
 
-    </section>
-    <section class="findUs">
-        <h2>Où nous trouver</h2>
-        <ul>
-            <li>
-                <span class="ico"></span>
-                <p>Le Bon Ami, 54 rue d'ICI, 65000 LA BAS</p>
-            </li>
-            <li>
-                <span class="ico"></span>
-                <p>Métro/RER : station blabla</p>
-            </li>
-            <li>
-                <span class="ico"></span>
-                <p>Bus: No 565</p>
-            </li>
-        </ul>
-        <div class="googleMap"></div>
-    </section>
-    <section class="contact">
-        <h2>Nous contacter</h2>
-        <p>Contactez-nous pour toutes informations concernant le salon ou la prise en charge de votre petit compagnon.</p>
-        <form action="" method="post">
-            <ul>
-                <li class="input input--juro">
-                    <input id="name" class="input_field" type="text" name="user-name">
-                    <label class="input_label" for="name">
-                        <span class="input_label-content">Nom - Prénom</span>
-                    </label>
+            <p>*Les prix peuvent varier en fonction de l'état d'emmêlement de la fourrure.</p>
+        </section>
+        <section class="useful_info">
+
+            <h2>Infos Pratiques</h2>
+
+            <h3>Horaires</h3>
+            <p class="schedule">Nous vous accueillons du mardi au samedi :
+                <span>le matin de 9h à 12h30</span>
+                <span>l'après-midi de 14h à 18h</span>
+            </p>
+
+            <h3>Où nous trouver</h3>
+            <ul class="adress">
+                <li>
+                    <span class="ico"></span>
+                    <p>87 avenue Georges Clemenceau,</p>
+                    <p>94700 Maison Alfort</p>
                 </li>
                 <li>
-                    <input class="input" id="email" type="email" name="user-email">
-                    <label class="input_label" for="email">
-                        <span class="input_label-content">Email</span>
-                    </label>
+                    <span class="ico"></span>
+                    <p>Métro : Ligne 8, station Maison Alford - Stade</p>
                 </li>
                 <li>
-                    <textarea id="message" name="user-message"></textarea>
-                    <label class="input_label" for="message">
-                        <span class="input_label-content">Votre message</span>
-                    </label>
+                    <span class="ico"></span>
+                    <p>Bus: ligne 107, arrêt Concorde</p>
                 </li>
             </ul>
-        </form>
-    </section>
-    <footer>
-        <ul>
-            <li>Le Bon Ami, 54 rue d'ICI, 65000 LA BAS | 0112451245</li>
-            <li><a href="mentionslegales.html"> | Mentions Légales</a></li>
-            <li> | © 2017 - Le Bon Ami Tous droits réservés</li>
-        </ul>
-    </footer>
+            <div class="googleMap">
 
-    <script type="text/javascript" src="js/main.js"></script>
+                <div id="map" class="map"></div>
+
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Nous contacter</h2>
+            <p>Contactez-nous pour toutes informations concernant le salon ou la prise en charge de votre petit compagnon.</p>
+            <form action="" method="post">
+                <ul>
+                    <li class="input input--juro">
+                        <input id="name" class="input_field" type="text" name="user-name">
+                        <label class="input_label" for="name">
+                            <span class="input_label-content">Nom - Prénom</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input class="input" id="email" type="email" name="user-email">
+                        <label class="input_label" for="email">
+                            <span class="input_label-content">Email</span>
+                        </label>
+                    </li>
+                    <li>
+                        <textarea id="message" name="user-message"></textarea>
+                        <label class="input_label" for="message">
+                            <span class="input_label-content">Votre message</span>
+                        </label>
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <footer>
+            <ul>
+                <li>Le Bon Ami, 87 avenue Georges Clemenceau, 94700 Maison Alfort | 09 50 57 73 09</li>
+                <li><a href="mentionslegales.html"> | Mentions Légales</a></li>
+                <li> | © 2017 - Le Bon Ami Tous droits réservés</li>
+            </ul>
+        </footer>
+
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <script>
+          function initMap() {
+            var uluru = {lat: 48.811980, lng: 2.443527};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: uluru
+          });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+          });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAn23a2WX-ZWjyFc-vCxaXxFQcBWuSfjPs &callback=initMap">
+</script>
 
 </body>
 </html>
