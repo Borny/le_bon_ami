@@ -1,18 +1,20 @@
 @import 'normalize';
 @import 'cssReset';
-@import 'charteLBA';
-@import 'mixinsLBA';
-@import 'placeholderLBA';
-@import 'navLBA';
+@import 'charte';
+@import 'mixins';
+@import 'placeholder';
+@import 'grid';
+@import 'nav';
 @import 'input';
 
 html,
 body{
+    width: 100%;
+    height: 100%;
     background: $white;
 }
 
 body{
-    padding: 40px 0 0;
     &.modal-open{
         overflow: hidden;
     }
@@ -43,119 +45,161 @@ section{
 
 //HOME
 .home{
-
 }
 
 //SERVICES
 .services{
     background: $blue;
-    .dogs{
-    	li{
-    		cursor: pointer;
-    	}
-        input[type=checkbox]{
-            display: none;
-            &:checked{
-                ~ .dropdown{
-                    height: 160px;
-                    .iconPlus{
-                        -webkit-transform: rotate(90deg);
-                        -moz-transform: rotate(90deg);
-                        -ms-transform: rotate(90deg);
-                        -o-transform: rotate(90deg);
-                        transform: rotate(90deg);
-                    }
-                    .minus{
-                        -webkit-transform: rotate(90deg);
-                        -moz-transform: rotate(90deg);
-                        -ms-transform: rotate(90deg);
-                        -o-transform: rotate(90deg);
-                        transform: rotate(90deg);
-                    }
-                    ul{
-                        opacity: 1;
-                    }
-                }
+    > p{
+        margin: 20px 0 0;
+    font-size:$font-size-md - 1px;
+    color: $gray;
+    text-align: center;
+  }
+    .service_item{
+      margin: 0 0 10px;
+      background: $white;
+      box-shadow: 0 3px 2px 1px $black-3;
+      border-radius: 4px;
+  } 
+
+  input[type=checkbox]{
+    display: none;
+    &:checked{
+        ~ .collapse-content{
+            height: inherit;
+            padding: 15px; 
+            p,
+            ul,
+            .division,
+            .btn_booking{
+                display: block;
+            }
+            
+        }
+        ~.collapse-btn{
+            .iconPlus{
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            .minus{
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
             }
         }
-        .dropdown{
-            @include animate;
+    }
+}
+.collapse-btn{
+    transition: all .4s ease-in-out;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 15px;
+    overflow: hidden;
+    cursor: pointer;
+    p{
+        display: inline-block;
+        vertical-align: middle;
+        color: $blue;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bolder;
+    }
+    .iconPlus{
+        @include animate;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+        width: 20px;
+        .plus{
             display: block;
-            width: 100%;
-            height: 40px;
-            margin: 0 0 10px;
-            padding: 10px 15px;
-            overflow: hidden;
-            background: $white;
-            border-radius: 4px;
-            box-shadow: 0 3px 2px 1px $black-3;
-            p{
-                display: inline-block;
-                vertical-align: middle;
-                color: $blue;
-                font-size: $font-size-lg;
-            }
-            .iconPlus{
-                @include animate;
-                position: relative;
-                display: inline-block;
-                vertical-align: middle;
-                float: right;
-                width: 20px;
-                .plus{
-                    display: block;
-                    width: 4px;
-                    height: 20px;
-                    margin: 0 auto;
-                    border-radius: 2px;
-                    background: $blue;
-                }
-                .minus{
-                    @include animate;
-                    position: absolute;
-                    display: inline-block;
-                    width: 20px;
-                    height: 4px;
-                    top: 8px;
-                    border-radius: 2px;
-                    background: $blue;
-                }
-            }
-            ul{
-                @include animate;
-                padding: 10px 0;
-                opacity: 0;
-                li{
-                    margin: 5px 0 10px;
-                    padding: 0 0 3px;
-                    border-bottom: 1px solid $blue;
-                    p{
-                        color: $gray;
-                        &:last-child{
-                            float: right;
-                        }
-                    }
-                }
+            width: 4px;
+            height: 20px;
+            margin: 0 auto;
+            border-radius: 2px;
+            background: $blue;
+        }
+        .minus{
+            @include animate;
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 4px;
+            top: 8px;
+            border-radius: 2px;
+            background: $blue;
+        }
+    }
+}
+.collapse-content {
+    height: 0;
+    p{
+        font-size: $font-size-sm;
+        color: $gray;
+    }
+    ul{
+        text-align: right;   
+        margin: 10px 0 0;
+        li{
+            display: inline-block;
+            vertical-align: bottom;
+            min-width: 37px;
+            min-height: 1px;
+            margin: 0 5px;
+            font-size: $font-size-sm;
+            color: $blue;
+            span{
+                display: block;
+                padding: 10px 0 0;
+                font-size: $font-size-md;
             }
         }
     }
-    .cats{
-        @extend .dogs;
-        h3{
-            float: right;
+    .division{
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        margin: 20px auto;
+        background: $yellow;
+    }
+    .btn_booking{
+        max-width: 150px;
+        margin: 20px auto 0;
+        padding: 5px 20px;
+        background: $yellow;
+        border-radius: 4px;
+        box-shadow: 0 3px 2px 1px $black-3;
+        color: $white;
+        text-align: center;
+        font-size: $font-size-lg;
+        font-family: $font-marshmallow;
+        transition: all .2s ease-in-out;
+        touch-action: manipulation;
+        outline: 0;
+        border:none;
+        &:hover,
+        &:focus{
+            background: lighten($yellow, 5%);
+            box-shadow: 0 3px 2px 1px $black-2;
         }
-        .dropdown{
-            > p{
-                float: right;
-            }
-            .iconPlus{
-                float: left;
-            }
-            ul{
-                clear: both;
-            }
+        &:active{
+            background: darken($yellow, 5%);
+            box-shadow: 0 3px 2px 1px $black-6;
         }
     }
+    p,
+    ul,
+    .division,
+    .btn_booking{
+        display: none;
+    }
+} 
 }
 
 //CONTACT

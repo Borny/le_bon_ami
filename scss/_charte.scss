@@ -8,8 +8,9 @@ $blue: #21ACE7;
 $yellow: #FFC26B;
 
 //OPACITY
-$black-3: rgba(0,0,0,.3);
 $black-6: rgba(0,0,0,.6);
+$black-3: rgba(0,0,0,.3);
+$black-2: rgba(0,0,0,.2);
 
 //FONT
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300);
@@ -38,6 +39,7 @@ $font-size-xxxl: 30px;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 500;
+$font-weight-bolder: 600;
 
 //Z-INDEX
 $zindex-header:100;

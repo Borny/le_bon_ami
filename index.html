@@ -15,7 +15,7 @@
             <li class="logo"></li>
             <li class="baseline"></li>
         </ul>
-        <input type="checkbox" id="navToggle">
+        <input type="checkbox" id="navToggle" autocomplete="off">
         <ul class="header-right">
             <li class="phoneIcon"></li>
             <li class="phoneNumber"></li>
@@ -44,209 +44,126 @@
         <p>Nous apporterons le plus grand soin à votre compagnon et lui donnerons toutes l'attention qu'il mérite !</p>
     </section>
     <section class="services">
-        <h2>Nos services</h2>
-        <div class="dogs">
-            <h3>Chiens</h3>
-            <ul>
-                <li>
-                    <input type="checkbox" id="dogs-bath">
-                    <label class="dropdown" for="dogs-bath">
-                        <p>Bain</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li> 
-                <li>
-                    <input type="checkbox" id="dogs-shampoo">
-                    <label class="dropdown" for="dogs-shampoo">
-                        <p>Shampoing</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" id="dogs-cut">
-                    <label class="dropdown" for="dogs-cut">
-                        <p>Coupe</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" id="dogs-color">
-                    <label class="dropdown" for="dogs-color">
-                        <p>Color</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-            </ul>
+        <h2>Nos services</h2>   
+
+        <p>Nos services sont adaptés à la taille de votre animal</p>
+
+        <h3>Chiens</h3>
+        <div class="service_item">
+            <input type="checkbox" id="smallSize" class="input" autocomplete="off">
+            <label class="collapse-btn" for="smallSize" class="input_label">
+                <p>Petite Taille</p>
+                <div class="iconPlus">
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+            </label>
+            <div class="service_details collapse-content">
+                <p>Yorkshire Terrier, Mini Schnauzer, Westie, Shih Tzu, Lhassa, Bichon Frisé ou Maltais, Coton de Tuléar, Cocker Spaniel…</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>36€</span></li>
+                    <li>Coupe<span>55€</span></li>
+                </ul>
+                <span class="division"></span>
+                <p>Teckel, Chihuahua, Jack Russel…</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>36€</span></li>
+                    <li></li>
+                </ul>
+                
+                <a href="#" class="btn btn_booking">
+                    Réserver
+                </a>  
+            </div>  
         </div>
-        <div class="cats">
-            <h3>Chats</h3>
-            <ul>
-                <li>
-                    <input type="checkbox" id="cats-bath">
-                    <label class="dropdown" for="cats-bath">
-                        <p>Bain</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li> 
-                <li>
-                    <input type="checkbox" id="cats-shampoo">
-                    <label class="dropdown" for="cats-shampoo">
-                        <p>Shampoing</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" id="cats-cut">
-                    <label class="dropdown" for="cats-cut">
-                        <p>Coupe</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" id="cats-color">
-                    <label class="dropdown" for="cats-color">
-                        <p>Color</p>
-                        <div class="iconPlus">
-                            <span class="plus"></span>
-                            <span class="minus"></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Petit</p>
-                                <p>20€</p>
-                            </li>
-                            <li>
-                                <p>Moyen</p>
-                                <p>30€</p>
-                            </li>
-                            <li>
-                                <p>Grand</p>
-                                <p>40€</p>
-                            </li>
-                        </ul>
-                    </label>
-                </li>
-            </ul>
+
+        <div class="service_item">
+            <input type="checkbox" id="mediumSize" class="input" autocomplete="off">
+            <label class="collapse-btn" for="mediumSize" class="input_label">
+                <p>Moyenne Taille</p>
+                <div class="iconPlus">
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+            </label>
+            <div class="service_details collapse-content">
+                <p>Springer Spaniel, Grand Caniche, Schnauzer, Fox Terrier, Cavalier King Charles, Spitz…</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>40€</span></li>
+                    <li>Coupe<span>65€</span></li>
+                </ul>
+                <span class="division"></span>
+                <p>Carlin, Bouledogue Français, Beagle, Basset hound…</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>40€</span></li>
+                    <li></li>
+                </ul>
+                
+                <a href="#" class="btn btn_booking">
+                    Réserver
+                </a>  
+            </div>  
         </div>
+
+        <div class="service_item">
+            <input type="checkbox" id="largeSize" class="input" autocomplete="off">
+            <label class="collapse-btn" for="largeSize" class="input_label">
+                <p>Grande Taille</p>
+                <div class="iconPlus">
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+            </label>
+            <div class="service_details collapse-content">
+                <p>Collie, Berger Allemand, Retriever...</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>70€</span></li>
+                    <li></li>
+                </ul>
+                <span class="division"></span>
+                <p>Dalmatien, Boxer, Rottweiller, Dobberman...</p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>65€</span></li>
+                    <li></li>
+                </ul>
+                
+                <a href="#" class="btn btn_booking">
+                    Réserver
+                </a>  
+            </div>  
+        </div>
+
+        <div class="service_item">
+            <input type="checkbox" id="xlargeSize" class="input" autocomplete="off">
+            <label class="collapse-btn" for="xlargeSize" class="input_label">
+                <p>Très Grande Taille</p>
+                <div class="iconPlus">
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+            </label>
+            <div class="service_details collapse-content">
+                <p>Terre Neuve, Lévrier Afghan, Saint Bernard, Chien de Montagne, Berger de Brie…<p>
+                <ul>
+                    <li>*à partir de :</li>
+                    <li>Brushing<span>36€</span></li>
+                    <li></li>
+                </ul>
+                
+                <a href="#" class="btn btn_booking">
+                    Réserver
+                </a>  
+            </div>  
+        </div>
+
+        <p>*Les prix peuvent varier en fonction de l'état d'emmêlement de la fourrure.</p>
+
     </section>
     <section class="findUs">
         <h2>Où nous trouver</h2>
@@ -300,7 +217,7 @@
         </ul>
     </footer>
 
-<script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+$columns: 12 !default;
+
+@mixin generate-grid($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i},.col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 +1) through $columns {
+        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i},.col-md-#{$i}, .col-lg-#{$i}";
+    }
+    #{$list} {
+        //width: percentage($i / $columns);
+        float: left;
+    }
+}
+
+%clearfix {
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.row {
+    @extend %clearfix;
+}
+
+@include generate-grid;
