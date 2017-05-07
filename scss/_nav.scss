@@ -5,22 +5,50 @@ header{
     left: 0;
     z-index: $zindex-header;
     width: 100%;
-    height: 40px;
     background: $white;
     box-shadow: 0 0 3px 1px $black-6;
     .header-left{
-        height: 100%;
         float: left;
+        .logo{
+            height: 100%;
+            padding: 4px 5px 0;
+        }
     }
     .header-right{
-        height: 100%;
         float: right;
         li{
-           width: 60px;
-           height: 100%;
+           min-width: 60px;
+           height: 40px;
            @include inlineBlock(middle);
        }
-   }
+       .phoneIcon{
+        position:relative;
+        padding: 4px;
+        text-align: center;
+        @media(min-width:$screen-sm){
+            &:before{
+                content: '';
+                display: block;
+                position:absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }
+    .phoneNumber{
+        display: none;
+        @media(min-width:$screen-sm){
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bolder;
+            display: inline-block;
+            padding: 10px 0 0; 
+            color: $blue;
+        }
+    }
+}
     .burgerContainer{ //Toggles the navigation bar
         .navToggle{
             position: relative;
@@ -118,23 +146,26 @@ header{
             background: $white;
             transition: .5s ease-in-out;
             li{
-                width: 100%;
-                height: 40px;
-                padding: 12px 0 0 25px;
-                background:$white;
-                border-bottom: 1px solid $blue;
-                color: $blue;
-                transition: .5s ease-in-out;
-                &:hover,
-                &:active {
-                    cursor:pointer;
-                    background:$blue;
-                    color: $white;
-                    font-weight:$font-weight-bold;
-                }
-                &.selected{
-                    font-weight:$font-weight-bold;
-                    box-shadow:inset 10px 0 0 0 $blue;
+                a{   
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    padding: 12px 0 0 25px;
+                    background:$white;
+                    border-bottom: 1px solid $blue;
+                    color: $blue;
+                    transition: .5s ease-in-out;
+                    &:hover,
+                    &:active {
+                        cursor:pointer;
+                        background:$blue;
+                        color: $white;
+                        font-weight:$font-weight-bold;
+                    }
+                    &.selected{
+                        font-weight:$font-weight-bold;
+                        box-shadow:inset 10px 0 0 0 $blue;
+                    }
                 }
             }
         }

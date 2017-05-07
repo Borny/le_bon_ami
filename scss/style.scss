@@ -6,18 +6,39 @@
 @import 'grid';
 @import 'nav';
 @import 'input';
+@import 'modal-checkbox';
+@import 'buttons';
+
+html{
+    scroll-behavior: smooth;
+}
 
 html,
 body{
     width: 100%;
     height: 100%;
     background: $white;
+    font-size:13px;
+    @media(min-width:$screen-sm){
+        font-size: 18px;
+    }
 }
 
 body{
     &.modal-open{
         overflow: hidden;
     }
+}
+
+#css-support-msg {
+    text-align: center;
+    color: green;
+    
+    display: none;
+}
+
+#css-support-msg.supported {
+    display: block;
 }
 
 h1{
@@ -40,181 +61,184 @@ h3{
 }
 
 section{
-    padding: 20px 15px;
+    padding: 40px 15px;
 }
 
 //HOME
 .home{
+    padding: 50px 15px 0;
+    .icon_wash{
+        text-align: center;
+    }
+    .icon_title{
+        text-align: center;
+    }
 }
 
+////////////
 //SERVICES
+////////////
 .services{
     background: $blue;
     > p{
         margin: 20px 0 0;
-    font-size:$font-size-md - 1px;
-    color: $gray;
-    text-align: center;
+        font-size:$font-size-md - 1px;
+        color: $gray;
+        text-align: center;
     }
     .service_item{
       margin: 0 0 10px;
       background: $white;
       box-shadow: 0 3px 2px 1px $black-3;
       border-radius: 4px;
-    } 
-    input[type=checkbox]{
-        display: none;
-        &:checked{
-            ~ .collapse-content{
-                height: inherit;
-                padding: 15px; 
-                p,
-                ul,
-                .division,
-                .btn_booking{
-                    display: block;
-                }
-                
-            }
-            ~.collapse-btn{
-                .iconPlus{
-                    -webkit-transform: rotate(90deg);
-                    -moz-transform: rotate(90deg);
-                    -ms-transform: rotate(90deg);
-                    -o-transform: rotate(90deg);
-                    transform: rotate(90deg);
-                }
-                .minus{
-                    -webkit-transform: rotate(90deg);
-                    -moz-transform: rotate(90deg);
-                    -ms-transform: rotate(90deg);
-                    -o-transform: rotate(90deg);
-                    transform: rotate(90deg);
-                }
-            }
-        }
-    }
-    .collapse-btn{
-        transition: all .4s ease-in-out;
-        display: block;
-        width: 100%;
-        height: 40px;
-        padding: 10px 15px;
-        overflow: hidden;
-        cursor: pointer;
-        p{
-            display: inline-block;
-            vertical-align: middle;
-            color: $blue;
-            font-size: $font-size-lg;
-            font-weight: $font-weight-bolder;
-        }
-        .iconPlus{
-            @include animate;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            float: right;
-            width: 20px;
-            .plus{
+  } 
+  input[type=checkbox]{
+    display: none;
+    &:checked{
+        ~ .collapse-content{
+            height: inherit;
+            padding: 15px; 
+            p,
+            ul,
+            .division,
+            .btn_booking{
                 display: block;
-                width: 4px;
-                height: 20px;
-                margin: 0 auto;
-                border-radius: 2px;
-                background: $blue;
+            }
+            
+        }
+        ~.collapse-btn{
+            .iconPlus{
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
             }
             .minus{
-                @include animate;
-                position: absolute;
-                display: inline-block;
-                width: 20px;
-                height: 4px;
-                top: 8px;
-                border-radius: 2px;
-                background: $blue;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
             }
         }
     }
-    .collapse-content {
-        height: 0;
-        p{
-            font-size: $font-size-sm;
-            color: $gray;
+}
+.collapse-btn{
+    transition: all .4s ease-in-out;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 15px;
+    overflow: hidden;
+    cursor: pointer;
+    p{
+        display: inline-block;
+        vertical-align: middle;
+        color: $blue;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bolder;
+    }
+    .iconPlus{
+        @include animate;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+        width: 20px;
+        .plus{
+            display: block;
+            width: 4px;
+            height: 20px;
+            margin: 0 auto;
+            border-radius: 2px;
+            background: $blue;
         }
-        ul{
-            text-align: right;   
-            margin: 10px 0 0;
-            li{
-                display: inline-block;
-                vertical-align: bottom;
-                min-width: 37px;
-                min-height: 1px;
-                margin: 0 5px;
-                font-size: $font-size-sm;
-                color: $blue;
-                span{
-                    display: block;
-                    padding: 10px 0 0;
-                    font-size: $font-size-md;
-                }
-            }
-        }
-        .division{
+        .minus{
+            @include animate;
+            position: absolute;
             display: inline-block;
-            width: 100%;
-            height: 2px;
-            margin: 20px auto;
-            background: $yellow;
-        }
-        .btn_booking{
-            max-width: 150px;
-            margin: 20px auto 0;
-            padding: 5px 20px;
-            background: $yellow;
-            border-radius: 4px;
-            box-shadow: 0 3px 2px 1px $black-3;
-            color: $white;
-            text-align: center;
-            font-size: $font-size-lg;
-            font-family: $font-marshmallow;
-            transition: all .2s ease-in-out;
-            touch-action: manipulation;
-            outline: 0;
-            border:none;
-            &:hover,
-            &:focus{
-                background: lighten($yellow, 5%);
-                box-shadow: 0 3px 2px 1px $black-2;
-            }
-            &:active{
-                background: darken($yellow, 5%);
-                box-shadow: 0 3px 2px 1px $black-6;
-            }
-        }
-        p,
-        ul,
-        .division,
-        .btn_booking{
-            display: none;
+            width: 20px;
+            height: 4px;
+            top: 8px;
+            border-radius: 2px;
+            background: $blue;
         }
     }
-} 
+}
+.collapse-content {
+    height: 0;
+    p{
+        font-size: $font-size-sm;
+        color: $gray;
+    }
+    ul{
+        text-align: right;   
+        margin: 10px 0 0;
+        li{
+            display: inline-block;
+            vertical-align: bottom;
+            min-width: 37px;
+            min-height: 1px;
+            margin: 0 5px;
+            font-size: $font-size-sm;
+            color: $blue;
+            span{
+                display: block;
+                padding: 10px 0 0;
+                font-size: $font-size-md;
+            }
+        }
+    }
+    .division{
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        margin: 20px auto;
+        background: $yellow;
+    }
+    p,
+    ul,
+    .division,
+    .btn_booking{
+        display: none;
+    }
+}
+}
 
+////////////////
 //USEFUL STUFF
+////////////////
 .useful_info{
     h3{
         color: $blue;
         font-size: $font-size-lg;
     }
+    .ico{
+        display: inline-block;
+        vertical-align: top;
+    }
     p{
         font-size: $font-size-sm;
         color: $gray;
+        display: inline-block;
+        vertical-align: top;
+
     }
     .schedule{
         span{
+            position:relative;
             display: block;
-            padding: 5px 0 0 5px;
+            padding: 5px 0 0 10px;
+            &:before{
+                content: '';
+                position:absolute;
+                top: 13px;
+                left: 0;
+                width: 5px;
+                height: 1px;
+                background: $blue;
+            }
         }
     }
     .adress{
@@ -233,12 +257,25 @@ section{
     }
 }
 
+///////////
 //CONTACT
+///////////
 .contact{
     background: $blue;
-
+    p{
+        color: $gray;
+        font-size:$font-size-sm;
+        margin: 15px 0;
+        text-align: center;
+    }
+    form{
+        text-align: center;
+    }
 }
 
+//////////
+//FOOTER
+//////////
 footer{
     padding: 15px;
     background: $blue;
@@ -247,7 +284,13 @@ footer{
         li{
             margin: 5px 0;
             text-align:center;
-            font-size: $font-size-sm;
+            font-size: 1em;
+            .btn_modal-open{
+                cursor: pointer;
+                &:hover{
+                    color: $gray;
+                }
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ $black-2: rgba(0,0,0,.2);
 $font-roboto: 'Roboto', Arial, sans-serif, serif, Helvetica;
 $font-marshmallow: 'soft marshmallow';
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,p,li,a,div,span,label,input,select{
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,p,li,a,div,section,span,label,input,select{
   font-family: $font-roboto;
 }
 
@@ -41,11 +41,19 @@ $font-weight-normal: 400;
 $font-weight-bold: 500;
 $font-weight-bolder: 600;
 
-//Z-INDEX
+/////////////////////
+// Z-index
+/////////////////////
 $zindex-header:100;
 $zindex-nav:150;
 $zindex-navToggle:200;
-$zindex-navToggle:250;
+$zindex-modal: 1000;
+$zindex-modal-dialog: 1100;
+
+/////////////////////
+// Columns
+/////////////////////
+$columns: 12 !default;
 
 //TEXT SHADOW
 $shadow-75: 1px 2px 1px rgba(0,0,0,.75);
