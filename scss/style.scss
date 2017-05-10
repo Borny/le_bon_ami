@@ -11,6 +11,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 html,
@@ -18,13 +19,13 @@ body{
     width: 100%;
     height: 100%;
     background: $white;
-    font-size:13px;
-    @media(min-width:$screen-sm){
-        font-size: 18px;
-    }
 }
 
 body{
+    font-size: .9em;
+    @media(min-width:$screen-sm){
+        font-size: 1em;
+    }
     &.modal-open{
         overflow: hidden;
     }
@@ -33,7 +34,6 @@ body{
 #css-support-msg {
     text-align: center;
     color: green;
-    
     display: none;
 }
 
@@ -51,22 +51,27 @@ h2{
     color: $yellow;
     font-family: $font-marshmallow;
     text-shadow: $shadow-75;
-    font-size: $font-size-xxxl;
+    font-size: 1.9em;
 }
 
 h3{
-    margin: 20px 0 10px; 
+    margin: 1.1em 0 0.7em;
     color: $gray;    
     font-family: $font-marshmallow;
+    font-size: 1.2em;
+}
+
+p{
+    color: $gray;
 }
 
 section{
-    padding: 40px 15px;
+    padding: 3em 1em;
 }
 
 //HOME
 .home{
-    padding: 50px 15px 0;
+    padding: 3.2em 1em 0;
     .icon_wash{
         text-align: center;
     }
@@ -80,14 +85,19 @@ section{
 ////////////
 .services{
     background: $blue;
-    > p{
-        margin: 20px 0 0;
-        font-size:$font-size-md - 1px;
-        color: $gray;
-        text-align: center;
+    .container{   
+        > p{
+            margin: 1.2em 0 0;
+            text-align: center;
+        }
+        ul{
+            li{
+                color: $gray;
+            }
+        }
     }
     .service_item{
-      margin: 0 0 10px;
+      margin: 0 0 .7em;
       background: $white;
       box-shadow: 0 3px 2px 1px $black-3;
       border-radius: 4px;
@@ -97,7 +107,7 @@ section{
     &:checked{
         ~ .collapse-content{
             height: inherit;
-            padding: 15px; 
+            padding: 1em; 
             p,
             ul,
             .division,
@@ -129,14 +139,14 @@ section{
     display: block;
     width: 100%;
     height: 40px;
-    padding: 10px 15px;
+    padding: .7em 1em;
     overflow: hidden;
     cursor: pointer;
     p{
         display: inline-block;
         vertical-align: middle;
         color: $blue;
-        font-size: $font-size-lg;
+        font-size: 1.1em;
         font-weight: $font-weight-bolder;
     }
     .iconPlus{
@@ -169,40 +179,38 @@ section{
 .collapse-content {
     height: 0;
     p{
-        font-size: $font-size-sm;
-        color: $gray;
-    }
-    ul{
-        text-align: right;   
-        margin: 10px 0 0;
-        li{
-            display: inline-block;
-            vertical-align: bottom;
-            min-width: 37px;
-            min-height: 1px;
-            margin: 0 5px;
-            font-size: $font-size-sm;
-            color: $blue;
-            span{
-                display: block;
-                padding: 10px 0 0;
-                font-size: $font-size-md;
-            }
+     color: $gray;
+ }
+ ul{
+    text-align: right;   
+    margin: .7em 0 0;
+    li{
+        display: inline-block;
+        vertical-align: bottom;
+        min-width: 37px;
+        min-height: 1px;
+        margin: 0 .5em;
+        color: $blue;
+        span{
+            display: block;
+            padding: .7em 0 0;
+            font-size: 1.2em;
         }
     }
-    .division{
-        display: inline-block;
-        width: 100%;
-        height: 2px;
-        margin: 20px auto;
-        background: $yellow;
-    }
-    p,
-    ul,
-    .division,
-    .btn_booking{
-        display: none;
-    }
+}
+.division{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    margin: 1.2em auto;
+    background: $yellow;
+}
+p,
+ul,
+.division,
+.btn_booking{
+    display: none;
+}
 }
 }
 
@@ -212,24 +220,23 @@ section{
 .useful_info{
     h3{
         color: $blue;
-        font-size: $font-size-lg;
+        font-size: 1.1em;
     }
     .ico{
         display: inline-block;
         vertical-align: top;
     }
     p{
-        font-size: $font-size-sm;
+        font-size: .9em;
         color: $gray;
         display: inline-block;
         vertical-align: top;
-
     }
     .schedule{
         span{
             position:relative;
             display: block;
-            padding: 5px 0 0 10px;
+            padding: .5em 0 0 .7em;
             &:before{
                 content: '';
                 position:absolute;
@@ -243,15 +250,23 @@ section{
     }
     .adress{
         li{
-            margin: 3px 0;
+            margin: .3em 0;
+        }
+    }
+    .useful_info-details{
+        max-width: 500px;
+        margin: 0 auto;
+        @media(min-width:$screen-md){   
+            max-width: 360px;
         }
     }
     .googleMap{
-        margin: 15px 0;
+            margin: 1em auto;
         .map{
             width: 100%;
             max-width: 500px;
             height: 200px;
+            margin: 0 auto;
             background: $blue; 
         }
     }
@@ -264,8 +279,7 @@ section{
     background: $blue;
     p{
         color: $gray;
-        font-size:$font-size-sm;
-        margin: 15px 0;
+        margin: 1em 0;
         text-align: center;
     }
     form{
@@ -277,14 +291,13 @@ section{
 //FOOTER
 //////////
 footer{
-    padding: 15px;
+    padding: 1em;
     background: $blue;
     color: $white;
     ul{
         li{
-            margin: 5px 0;
+            margin: 0.3em 0;
             text-align:center;
-            font-size: 1em;
             .btn_modal-open{
                 cursor: pointer;
                 &:hover{

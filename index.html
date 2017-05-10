@@ -1149,7 +1149,8 @@
             <h2>Nos services</h2>   
 
             <h3>Le toilettage</h3>
-            <ul>Le toilettage comprend:
+            <ul>
+                <li>Le toilettage comprend:</li>
                 <li>Deux shampooings</li>
                 <li>Le brushing à la brosse</li>
                 <li>La coupe des ongles</li>
@@ -1288,40 +1289,49 @@
 
             <h2>Infos Pratiques</h2>
 
-            <h3>Horaires</h3>
-            <p class="schedule">Nous vous accueillons du mardi au samedi :
-                <span>le matin de 9h à 12h30</span>
-                <span>l'après-midi de 14h à 18h</span>
-            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="useful_info-details">
+                        <h3>Horaires</h3>
+                        <p class="schedule">Nous vous accueillons du mardi au samedi :
+                            <span>le matin de 9h à 12h30</span>
+                            <span>l'après-midi de 14h à 18h</span>
+                        </p>
 
-            <h3>Où nous trouver</h3>
-            <ul class="adress">
-                <li>
-                    <span class="ico ico_pinpoint">
-                        <img src="img/svg/icon_pinpoint.svg">         
-                    </span>
-                    <p>87 avenue Georges Clemenceau,</p>
-                    <p>94700 Maison Alfort</p>
-                </li>
-                <li>
-                    <span class="ico icon_metro">
-                        <img src="img/svg/icon_metro.svg">         
-                    </span>
-                    <p>Métro : Ligne 8, station Maison Alford - Stade</p>
-                </li>
-                <li>
-                    <span class="ico icon_bus">
-                        <img src="img/svg/icon_bus.svg">         
-                    </span>
-                    <p>Bus: ligne 107, arrêt Concorde</p>
-                </li>
-            </ul>
-            <div class="googleMap">
+                        <h3>Où nous trouver</h3>
+                        <ul class="adress">
+                            <li>
+                                <span class="ico ico_pinpoint">
+                                    <img src="img/svg/icon_pinpoint.svg">         
+                                </span>
+                                <p>87 avenue Georges Clemenceau,</p>
+                                <p>94700 Maison Alfort</p>
+                            </li>
+                            <li>
+                                <span class="ico icon_metro">
+                                    <img src="img/svg/icon_metro.svg">         
+                                </span>
+                                <p>Métro : Ligne 8, station Maison Alford - Stade</p>
+                            </li>
+                            <li>
+                                <span class="ico icon_bus">
+                                    <img src="img/svg/icon_bus.svg">         
+                                </span>
+                                <p>Bus: ligne 107, arrêt Concorde</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                <div id="map" class="map"></div>
+                <div class="col-md-6">
 
+                    <div class="googleMap">
+
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
             </div>
-            </div>
+
         </section>
         <section id="contact" class="contact">
             <div class="container">
@@ -1329,37 +1339,39 @@
                 <p>Contactez-nous pour toutes informations concernant le salon ou la prise en charge de votre petit compagnon.</p>
                 <form action="" method="post">
 
-                    <!--Name-->
-                    <div class="input_element">
-                        <input id="name" class="input_field" type="text" name="user-name">
-                        <label class="input_label" for="name">
-                            <span class="input_label-content">Nom - Prénom</span>
-                        </label>
+                    <div class="col-md-6">
+                        <!--Name-->
+                        <div class="input_element">
+                            <input id="name" class="input_field" type="text" name="user-name">
+                            <label class="input_label" for="name">
+                                <span class="input_label-content">Nom - Prénom</span>
+                            </label>
+                        </div>
+
+                        <!--Email-->
+                        <div class="input_element">
+                            <input class="input_field" id="email" type="email" name="user-email">
+                            <label class="input_label" for="email">
+                                <span class="input_label-content">Email</span>
+                            </label>
+                        </div>
                     </div>
+                    <div class="col-md-6">
+                        <!--Message-->
+                        <div class="input_element input_element-textarea">
+                            <textarea id="message" class="input_field textarea" name="user-message"></textarea>
+                            <label class="input_label input_label-textarea" for="message">
+                                <span class="input_label-content">Votre message</span>
+                            </label>
 
-                    <!--Email-->
-                    <div class="input_element">
-                        <input class="input_field" id="email" type="email" name="user-email">
-                        <label class="input_label" for="email">
-                            <span class="input_label-content">Email</span>
-                        </label>
+
+                        </div>
+                       
+                        <!--Send Button-->    
+                        <button class="btn btn_booking">
+                            Envoyer
+                        </button>  
                     </div>
-
-                    <!--Message-->
-                    <div class="input_element input_element-textarea">
-                        <textarea id="message" class="input_field textarea" name="user-message"></textarea>
-                        <label class="input_label input_label-textarea" for="message">
-                            <span class="input_label-content">Votre message</span>
-                        </label>
-
-
-                    </div>
-                   
-                    <!--Send Button-->    
-                    <button class="btn btn_booking">
-                        Envoyer
-                    </button>  
-
                 </form>
             </div>
         </section>

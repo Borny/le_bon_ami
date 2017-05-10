@@ -5,7 +5,7 @@
         vertical-align: top;
         width: 100%;
         max-width: 350px;
-        margin: 15px 0;
+        margin: 1em 0;
         &.filled{
             .input_field{
                 opacity: 1;
@@ -24,7 +24,7 @@
             }
         }
         &.input_element-textarea{
-            margin: 15px 0 70px;
+            margin: 1em 0 3.6em;
         }
     }
 
@@ -37,13 +37,13 @@
         float: right;
         width: calc(100% - 8px);
         height: calc(100% - 8px);
+        padding: 0 .6em;
         border: none;
         border-radius: 0;
         outline: none;
         box-shadow: none;
         font-weight: $font-weight-bold;
-        padding: 0 10px;
-        background: #f0f0f0;
+        background: $gray-light;
         color: $gray;
         opacity: 0;
         -webkit-transform: scale3d(1, 0, 1);
@@ -55,7 +55,7 @@
         &.textarea{
             height: 100px;   
             transform-origin: 0 10%;
-            padding: 15px;
+            padding: 0 .6em;
         }
         &:focus{
             opacity: 1;
@@ -71,6 +71,7 @@
                     transform: translate3d(0, -35px, 0) scale3d(0.8, 0.8, 1) translateZ(1px);
                 }
             }
+
             &.textarea{
                 ~.input_label{
                     &:before{
@@ -89,10 +90,9 @@
         display: inline-block;
         float: right;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 .7em;
         color: $gray;
         font-weight: $font-weight-bold;
-        font-size: $font-size-md;
         font-family: $font-roboto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -129,7 +129,7 @@
     .input_label-content{
         position: relative;
         display: block;
-        padding: 15px 0;
+        padding: 1em 0;
         width: 100%;
         -webkit-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
