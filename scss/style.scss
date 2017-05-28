@@ -106,7 +106,7 @@ section{
     display: none;
     &:checked{
         ~ .collapse-content{
-            height: inherit;
+            transform: scale3d(1,1,1);
             padding: 1em; 
             p,
             ul,
@@ -177,11 +177,13 @@ section{
     }
 }
 .collapse-content {
-    height: 0;
+    transition: all .2s ease-in-out;
+    transform: scale3d(1,0,1);
+    transform-origin: 0 0;
     p{
-     color: $gray;
- }
- ul{
+       color: $gray;
+   }
+   ul{
     text-align: right;   
     margin: .7em 0 0;
     li{
@@ -261,7 +263,7 @@ ul,
         }
     }
     .googleMap{
-            margin: 1em auto;
+        margin: 1em auto;
         .map{
             width: 100%;
             max-width: 500px;
@@ -305,5 +307,29 @@ footer{
                 }
             }
         }
+    }
+}
+
+
+.aside{
+    width: 300px;
+    height: inherit;
+    background: blue;
+    position:relative;
+    display: inline-block;
+    .aside-content{
+        position: fixed;
+        width : 300px;
+        height: 300px;
+        background: red;
+    }
+}
+
+.main{
+    background: yellow;
+    display: inline-block;
+    .main-content{
+        background: purple;
+        width:50%;        height: 200px; 
     }
 }
