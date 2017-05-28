@@ -44,6 +44,12 @@ body{
 h1{
     text-align: center;
     color: $gray;
+    font-weight: $font-weight-normal;
+    font-size: 1.5em;
+    margin:  1em 0;
+    span{
+        font-weight: $font-weight-bolder;
+    }
 }
 
 h2{
@@ -69,14 +75,71 @@ section{
     padding: 3em 1em;
 }
 
+img{
+    max-width: 100%;
+}
+
+////////
 //HOME
+////////
 .home{
     padding: 3.2em 1em 0;
     .icon_wash{
         text-align: center;
+        img{
+            @media(min-width:$screen-sm){
+                width: 50%;
+            }   
+        }
     }
     .icon_title{
         text-align: center;
+        svg{
+            @media(min-width:$screen-sm){
+                width: 30%;
+                height: auto;
+            }
+
+        }
+    }
+}
+
+//////////
+// ABOUT
+//////////
+.about{
+    p{
+        text-align: center;
+    }
+    .slider{
+        display: none;
+        @media(min-width: $screen-sm){
+            display: block;
+            position: relative;
+            text-align: center;
+            border: 2px solid $yellow;
+            border-radius: 4px;
+            &:before,
+            &:after{
+                position:absolute;
+                content: '';
+                display: inline-block;
+                width: 20%;
+                height: auto;
+                background: url('../img/svg/bubbles.svg');
+            }
+            &:before{
+                top: 0;
+                left: 0;
+            }
+            &:after{
+                bottom: 0;
+                right: 0;
+            }
+            img{
+                max-width: 50%;
+            }
+        }
     }
 }
 
@@ -85,14 +148,23 @@ section{
 ////////////
 .services{
     background: $blue;
-    .container{   
-        > p{
-            margin: 1.2em 0 0;
-            text-align: center;
+    .container{
+        .col-md-6{
+            > p{
+                margin: 1.2em 0;
+                text-align: center;
+            }
         }
-        ul{
+        h3{
+            @media(min-width:$screen-sm){
+                text-align: center;
+            }
+        }
+        .services_list{
+            text-align: center;
+            margin: 1.5em auto;
             li{
-                color: $gray;
+                color: $white;
             }
         }
     }
@@ -135,6 +207,10 @@ section{
     }
 }
 .collapse-btn{
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     display: block;
     width: 100%;
@@ -227,6 +303,8 @@ ul,
     .ico{
         display: inline-block;
         vertical-align: top;
+        width: 15px;
+        text-align: center;
     }
     p{
         font-size: .9em;
