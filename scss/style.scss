@@ -167,6 +167,15 @@ img{
                 color: $white;
             }
         }
+        .img_container{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 150px;
+            img{
+                display: inline-block;
+            }
+        }
     }
     .service_item{
       margin: 0 0 .7em;
