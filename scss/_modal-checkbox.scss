@@ -45,6 +45,9 @@
         z-index: $zindex-modal-dialog;
         border-radius: 4px;
         background: $white;
+        @media(min-width: $screen-sm){
+            width: 600px;
+        }
         .modal-header {
             padding: 15px 0;
             background: $blue;
@@ -73,11 +76,7 @@
             display: block;
         }
         ~ .modal-dialog {
-            -webkit-transition: .5s;
-            -moz-transition: .5s;
-            -ms-transition: .5s;
-            -o-transition: .5s;
-            transition: .5s;
+            @include animate;
             top: 10px;
         }
     }

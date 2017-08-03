@@ -12,4 +12,3 @@ inputNav.addEventListener('click', function () {
         body.classList.remove('modal-open');
     }
 });
-

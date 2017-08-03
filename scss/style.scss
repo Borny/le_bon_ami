@@ -261,14 +261,15 @@ img{
         }
     }
 }
+
 .collapse-content {
     transition: all .2s ease-in-out;
     transform: scale3d(1,0,1);
     transform-origin: 0 0;
     p{
-       color: $gray;
-   }
-   ul{
+     color: $gray;
+ }
+ ul{
     text-align: right;   
     margin: .7em 0 0;
     li{
@@ -285,6 +286,7 @@ img{
         }
     }
 }
+
 .division{
     display: inline-block;
     width: 100%;
