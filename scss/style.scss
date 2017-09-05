@@ -1,13 +1,22 @@
-@import 'normalize';
-@import 'cssReset';
-@import 'charte';
-@import 'mixins';
-@import 'placeholder';
-@import 'grid';
-@import 'nav';
-@import 'input';
-@import 'modal-checkbox';
-@import 'buttons';
+// BASE
+@import 'base/normalize';
+@import 'base/base';
+
+// TOOLS
+@import 'tools/variables';
+@import 'tools/mixins';
+@import 'tools/placeholders';
+@import 'tools/grid';
+
+// MODULES
+@import 'modules/modals';
+@import 'modules/buttons';
+@import 'modules/inputs';
+
+// COMPONENTS
+@import 'components/nav';
+
+// @import 'cssReset';
 
 html{
     scroll-behavior: smooth;
@@ -29,16 +38,6 @@ body{
     &.modal-open{
         overflow: hidden;
     }
-}
-
-#css-support-msg {
-    text-align: center;
-    color: green;
-    display: none;
-}
-
-#css-support-msg.supported {
-    display: block;
 }
 
 h1{
